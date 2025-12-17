@@ -1,15 +1,14 @@
-package Basic;
+package Basic ;
 
 import java.util.Scanner;
 
-public class ReverseNumber {
+public class ReverseNumber{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in) ; 
-        System.out.println("Entera number");
+        System.out.println("Enter the number: ");
+        int num = sc.nextInt() ; 
 
-        int num = sc.nextInt() ; // 1234
-
-        int reverse = 0 ; 
+        int originalNum = num, reverse = 0; 
 
         while(num != 0){
             int lastDigit = num % 10 ; 
@@ -17,8 +16,7 @@ public class ReverseNumber {
             num = num / 10 ; 
         }
 
-        System.out.println("Reversed Number: " + reverse);
-        sc.close() ; 
+        System.out.println("reverse: " + reverse);
 
     }
 }
